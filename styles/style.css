@@ -286,8 +286,8 @@
   filter: grayscale(70%);
 }
 
-.sepia {
-  filter: sepia(0.7);
+.multi-filter {
+  filter: sepia(0.5) hue-rotate(-30deg);
 }
 
 .brightness {
