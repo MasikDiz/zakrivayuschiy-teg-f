@@ -1,1 +1,66 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --main-font: "Inter-Variable";
+    --accent-font: "PressStart2P";
+    --text-stroke_color: rgb(255 255 255 / 0.5);
+    --bg_color: #fff;
+    --text_color: #000;
+    --backdrop_color: rgb(0 0 0 / 0.75);
+    --accent-hover_color: #fff;
+    --accent-focus_color: #000;
+    --contour_color: #000;
+    --hover_color: #000;
+    --animation-fill_color: #ff0000;
+    --card-text_font-weight: 410;
+    --card-title_font-weight: 715;
+    --page_bg-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(0deg, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --header-logo_size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+    --header-title_size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+    --card-title_size: 1.125rem;
+    --card-text_size: 1.125rem;
+    --button-text_size: 0.875rem;
+    --label-text_size: 0.875rem;
+    --floppy-dialog-text_size: 0.875rem;
+    --header_padding-inline: clamp(0.9375rem, -1.3732rem + 9.8592vw, 7.5rem);
+    --header_padding-block: clamp(7.5625rem, 7.3644rem + 0.8451vw, 8.125rem);
+    --header_margin-block-start: 6.25rem;
+    --header_margin-block-end: 2.875rem;
+    --section_inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+    --like-button_inline-size: 8.125rem;
+    --card-title_padding-block: 0.25rem;
+    --card-title_padding-inline: 0.625rem;
+    --card-content_padding: 1.5625rem;
+    --main-content_margin-block-end: 6.25rem;
+    --header_line-height: 1em;
+    --card-title_line-height: 1.222em;
+    --text_line-height: 1.167em;
+    --button-text_line-height: 0.9em;
+    --label_line-height: 1em;
+    --like-button_padding-block: 0.65625rem;
+    --save-button_padding-block: 0.9375rem;
+    --save-button_padding-inline: 1.125rem;
+    --floppy-dialog_min-inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+    --floppy-dialog-text_max-inline-size: 14.625rem;
+    --floppy-dialog_padding: 1.75rem;
+    --floppy-dialog_padding-inline: 2.375rem;
+    --floppy-dialog-button_padding-block: 0.625rem;
+    --floppy-dialog-button_padding-inline: clamp(7.125rem, 6.7729rem + 1.5023vw, 8.125rem);
+    --floppy-dialog-text_line-height: 1.5em;
+    --header_gap: 1.25rem;
+    --page_gap: 3.125rem;
+    --main-content_gap: 3.125rem;
+    --card_gap: 3.03125rem;
+    --card-content_gap: 1.5625rem;
+    --card-button_gap: 0.1875rem;
+    --save-button_gap: 0.5rem;
+    --floppy-dialog_gap: 1.875rem;
+    --floppy-dialog-content_gap: 1.25rem;
+    --text-stroke_width: 0.071em;
+    --border_width: 0.125rem;
+    --card-label_position: 1.5625rem;
+    --button-svg-floppy_size: 1.3125rem;
+    --dialog-svg-floppy_size: 2.4375rem;
+  }

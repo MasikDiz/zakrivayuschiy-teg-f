@@ -11,6 +11,369 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
   min-block-size: 100dvb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--main-font, "Inter-Variable"), sans-serif;
+  font-variation-settings: "wght" var(--card-text_font-weight, 410);
+  background-color: var(--bg_color, #fff);
+  color: var(--text_color, #000);
+  gap: var(--page_gap, 3.125rem);
+  background-image: var(--page_bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--accent-font, "PressStart2P"), fantasy;
+  background-color: inherit;
+  border: currentColor solid var(--border_width, 0.125rem);
+  gap: var(--header_gap, 1.25rem);
+  text-align: center;
+  text-transform: uppercase;
+  padding-inline: var(--header_padding-inline, clamp(0.9375rem, -1.3732rem + 9.8592vw, 7.5rem));
+  padding-block: var(--header_padding-block, clamp(7.5625rem, 7.3644rem + 0.8451vw, 8.125rem));
+  margin-block: var(--header_margin-block-start, 6.25rem) var(--header_margin-block-end, 2.875rem);
+  white-space: nowrap;
+}
+
+.general__section {
+  inline-size: var(--section_inline-size, clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem));
+}
+
+.logo {
+  line-height: var(--header_line-height, 1em);
+  font-size: var(--header-logo_size, clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
+}
+
+.title {
+  line-height: var(--header_line-height, 1em);
+  font-size: var(--header-title_size,clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem));
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-content_gap, 3.125rem);
+  margin-block-end: var(--main-content_margin-block-end, 6.25rem);
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card_gap, 3.03125rem);
+}
+
+.main-content__card {
+  background-color: var(--bg_color, #fff);
+  border: currentColor solid var(--border_width, 0.125rem);
+}
+
+.card__title {
+  line-height: var(--card-title_line-height, 1.222);
+  font-variation-settings: "wght" var(--card-title_font-weight, 715);
+  font-size: var(--card-title_size, 1.125rem);
+  padding: var(--card-title_padding-block, 0.25rem) var(--card-title_padding-inline, 0.625rem);
+}
+
+.card__image-block {
+  position: relative;
+  border-block: currentColor solid var(--border_width, 0.125rem);
+  transition: 2s linear;
+}
+
+.card__image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.label {
+  position: absolute;
+  right: var(--card-label_position, 1.5625rem);
+  top: var(--card-label_position, 1.5625rem);
+  font-family: var(--accent-font, "PressStart2P"), fantasy;
+  font-size: var(--label-text_size, 0.875rem);
+  line-height: var(--label_line-height, 1em);
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  text-shadow: -1px 0 var(--text-stroke_color, rgb(255 255 255 / 0.5)),
+    0 1px var(--text-stroke_color, rgb(255 255 255 / 0.5)),
+    1px 0 var(--text-stroke_color, rgb(255 255 255 / 0.5)),
+    0 -1px var(--text-stroke_color, rgb(255 255 255 / 0.5));
+}
+
+@supports ((text-stroke: var(--text-stroke_width, 0.071em) rgb(255 255 255 / 0.5)) or
+    (-webkit-text-stroke: var(--text-stroke_width, 0.071em) rgb(255 255 255 / 0.5))) {
+  .label {
+    -webkit-text-stroke: var(--text-stroke_width, 0.071em)
+      var(--text-stroke_color, rgb(255 255 255 / 0.5));
+    text-stroke: var(--text-stroke_width, 0.071em)
+      var(--text-stroke_color, rgb(255 255 255 / 0.5));
+    text-shadow: none;
+  }
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-content_gap, 1.5625rem);
+  padding: var(--card-content_padding, 1.5625rem);
+}
+
+.card__text {
+  font-size: var(--card-text_size, 1.125rem);
+  line-height: var(--text_line-height, 1.167em);
+}
+
+.card__button {
+  display: flex;
+  gap: var(--card-button_gap, 0.1875rem);
+  align-self: end;
+}
+
+.card__icon-button {
+  background-color: var(--bg_color, #fff);
+  padding: 0;
+  border: transparent solid var(--border_width, 0.125rem);
+  line-height: 0;
+  transition: 0.3s ease;
+}
+
+.card__like-button {
+  inline-size: var(--like-button_inline-size, 8.125rem);
+  padding-block: var(--like-button_padding-block, 0.65625rem);
+  line-height: 0;
+}
+
+.button__text {
+  font-family: var(--accent-font, "PressStart2P"), fantasy;
+  font-size: var(--button-text_size, 0.875rem);
+  line-height: var(--button-text_line-height, 0.9em);
+}
+
+.button__general {
+  background-color: var(--bg_color, #fff);
+  border: currentColor solid var(--border_width, 0.125rem);
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.save-button {
+  align-self: center;
+  display: flex;
+  gap: var(--save-button_gap, 0.5rem);
+  justify-content: center;
+  align-items: center;
+  padding: var(--save-button_padding-block, 0.9375rem) var(--save-button_padding-inline, 1.125rem);
+}
+
+.save-button__svg-floppy {
+  height: var(--button-svg-floppy_size, 1.3125rem);
+  width: var(--button-svg-floppy_size, 1.3125rem);
+}
+
+.floppy-dialog[open] {
+  min-inline-size: var(--floppy-dialog_inline-size, clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem));
+  display: grid;
+  overflow: visible;
+  justify-content: center;
+  gap: var(--floppy-dialog_gap, 1.875rem);
+  padding: var(--floppy-dialog_padding, 1.75rem);
+  background-color: var(--bg_color, #fff);
+  border: currentColor solid var(--border_width, 0.125rem);
+}
+
+.floppy-dialog[open]::backdrop {
+  background-color: var(--backdrop_color, rgb(0 0 0 / 0.75));
+}
+
+.floppy-dialog__content {
+  display: grid;
+  grid-template-columns: 2.4375rem auto;
+  align-items: center;
+  gap: var(--floppy-dialog-content_gap, 1.25rem);
+}
+
+.floppy-dialog__svg-floppy {
+  height: var(--dialog-svg-floppy_size, 2.4375rem);
+  width: var(--dialog-svg-floppy_size, 2.4375rem);
+}
+
+.floppy-dialog__text {
+  max-inline-size: var(--floppy-dialog-text_max-inline-size, 14.625rem);
+  font-family: var(--accent-font, "PressStart2P"), fantasy;
+  font-size: var(--floppy-dialog-text_size, 0.875rem);
+  line-height: var(--floppy-dialog-text_line-height, 1.5em);
+  text-transform: uppercase;
+}
+
+.floppy-dialog__button {
+  padding: var(--floppy-dialog-button_padding-block, 0.625rem) var(--floppy-dialog-button_padding-inline, clamp(7.125rem, 6.7729rem + 1.5023vw, 8.125rem));
+  line-height: 0;
+}
+
+.floppy-dialog__button-text {
+  text-transform: uppercase;
+}
+
+.button__general:focus,
+.card__icon-button:focus {
+  outline: none;
+}
+
+.button__general:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 currentColor;
+  transition: 0.3s ease;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: var(--accent-focus_color, #000);
+  transition: 0.3s ease;
+}
+
+.button__general::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: 0.5s ease-in-out;
+  background-color: var(--accent-hover_color, #fff);
+  mix-blend-mode: difference;
+}
+
+.button__general:hover::after {
+  transform: scaleX(1);
+  transition: 0.5s ease-in-out;
+}
+
+.button__text,
+.save-button__svg-floppy {
+  position: relative;
+  z-index: 1;
+  color: var(--accent-hover_color, #fff);
+  mix-blend-mode: difference;
+}
+
+.button__general:hover,
+.card__icon-button:hover {
+  cursor: pointer;
+}
+
+.contrast {
+  filter: contrast(120%);
+}
+
+.saturate {
+  filter: saturate(120%);
+}
+
+.grayscale {
+  filter: grayscale(70%);
+}
+
+.sepia {
+  filter: sepia(0.7);
+}
+
+.brightness {
+  filter: brightness(40%);
+}
+
+.blur {
+  filter: blur(3px);
+}
+
+.invert {
+  filter: invert(90%);
+}
+
+.opacity {
+  filter: opacity(40%);
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.contour {
+  transition: fill 0.1s linear;
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.core {
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .core {
+  transition: fill 0.3s linear;
+  fill: var(--hover_color, #000);
+}
+
+.like-icon:hover .main-body {
+  transition: fill 0.3s 0.05s linear;
+  fill: var(--hover_color, #000);
+}
+
+.like-icon:active .core {
+  transition: fill 0.3s linear;
+  fill: var(--animation-fill_color, #ff0000);
+}
+
+.like-icon:active .main-body {
+  transition: fill 0.3s 0.05s linear;
+  fill: var(--animation-fill_color, #ff0000);
+}
+
+.like-icon.is-liked .core {
+  transition: fill 0.3s linear;
+  fill: var(--animation-fill_color, #ff0000);
+}
+
+.like-icon.is-liked .main-body {
+  transition: fill 0.3s 0.05s linear;
+  fill: var(--animation-fill_color, #ff0000);
+}
+
+.like-icon.is-liked .contour {
+  transition: fill 0.3s 0.06s linear;
+  fill: var(--animation-fill_color, #ff0000);
+}
+
+@media (width <= 375.200px) {
+  .header {
+    --header_margin-block-end: 3.125rem;
+    margin-block-end: var(--header_margin-block-end, 3.125rem);
+  }
+
+  .save-button {
+    flex-direction: column;
+  }
+
+  .save-button__svg-floppy {
+    --button-svg-floppy_size: 1.75rem;
+    height: var(--button-svg-floppy_size, 1.75rem);
+    width: var(--button-svg-floppy_size, 1.75rem);
+  }
+
+  .floppy-dialog[open] {
+    padding-inline: var(--floppy-dialog_padding-inline, 2.375rem);
+  }
 }
