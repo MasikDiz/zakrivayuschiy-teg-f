@@ -3,7 +3,7 @@
 :root {
     --main-font: "Inter-Variable";
     --accent-font: "PressStart2P";
-    --text-stroke_color: rgb(255 255 255 / 0.5);
+    --text-stroke_color: rgb(255 255 255);
     --bg_color: #fff;
     --text_color: #000;
     --backdrop_color: rgb(0 0 0 / 0.75);
