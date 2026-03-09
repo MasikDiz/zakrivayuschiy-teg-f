@@ -12,7 +12,6 @@
 
 .page {
   min-inline-size: 375px;
-  max-inline-size: 1440px;
   min-block-size: 100dvb;
   display: flex;
   flex-direction: column;
@@ -105,10 +104,12 @@
   line-height: var(--label_line-height, 1em);
   text-transform: uppercase;
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--text-stroke_color, rgb(255 255 255 / 0.5)),
-    0 1px var(--text-stroke_color, rgb(255 255 255 / 0.5)),
-    1px 0 var(--text-stroke_color, rgb(255 255 255 / 0.5)),
-    0 -1px var(--text-stroke_color, rgb(255 255 255 / 0.5));
+  opacity: 0.5;
+  color: var(--text_color, #000);
+  text-shadow: -1px 0 var(--text-stroke_color, rgb(255 255 255)),
+    0 1px var(--text-stroke_color, rgb(255 255 255)),
+    1px 0 var(--text-stroke_color, rgb(255 255 255)),
+    0 -1px var(--text-stroke_color, rgb(255 255 255));
 }
 
 @supports ((text-stroke: var(--text-stroke_width, 0.071em) rgb(255 255 255 / 0.5)) or
